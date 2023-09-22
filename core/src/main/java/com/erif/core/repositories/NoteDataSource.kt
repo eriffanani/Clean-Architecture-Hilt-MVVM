@@ -1,4 +1,4 @@
-package com.erif.core.repository
+package com.erif.core.repositories
 
 import com.erif.core.data.Note
 
@@ -11,6 +11,5 @@ interface NoteDataSource {
     suspend fun getAll(): List<Note>
 
     suspend fun remove(note: Note)
-
 
 }

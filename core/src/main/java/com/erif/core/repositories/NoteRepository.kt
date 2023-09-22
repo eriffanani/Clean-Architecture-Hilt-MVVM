@@ -1,4 +1,4 @@
-package com.erif.core.repository
+package com.erif.core.repositories
 
 import com.erif.core.data.Note
 

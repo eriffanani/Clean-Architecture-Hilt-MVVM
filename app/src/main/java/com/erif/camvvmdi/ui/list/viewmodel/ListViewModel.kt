@@ -1,7 +1,8 @@
-package com.erif.camvvmdi.framework
+package com.erif.camvvmdi.ui.list.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.erif.camvvmdi.domain.NoteUseCases
 import com.erif.core.data.Note
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -11,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ListViewModel @Inject constructor(
-    private val useCases: UseCases
+    private val noteUseCases: NoteUseCases
 ): ViewModel() {
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
@@ -20,8 +21,8 @@ class ListViewModel @Inject constructor(
 
     fun getNotes() {
         coroutineScope.launch {
-            val noteList = useCases.getAllNote()
-            noteList.forEach { it.wordCount = useCases.getWordCount.invoke(it) }
+            val noteList = noteUseCases.getAllNote()
+            noteList.forEach { it.wordCount = noteUseCases.getWordCount.invoke(it) }
             notes.postValue(noteList)
         }
     }

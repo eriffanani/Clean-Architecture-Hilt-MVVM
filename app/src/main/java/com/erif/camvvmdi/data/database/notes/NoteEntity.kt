@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.framework.db
+package com.erif.camvvmdi.data.database.notes
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

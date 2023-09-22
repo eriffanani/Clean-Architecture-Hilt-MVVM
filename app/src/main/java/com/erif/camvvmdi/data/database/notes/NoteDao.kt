@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.framework.db
+package com.erif.camvvmdi.data.database.notes
 
 import androidx.room.Dao
 import androidx.room.Delete

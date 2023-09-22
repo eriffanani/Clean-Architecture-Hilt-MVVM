@@ -1,7 +1,8 @@
-package com.erif.camvvmdi.framework
+package com.erif.camvvmdi.ui.form.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.erif.camvvmdi.domain.NoteUseCases
 import com.erif.core.data.Note
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -11,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NoteViewModel @Inject constructor(
-    private val useCases: UseCases
+    private val noteUseCases: NoteUseCases
 ): ViewModel() {
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
@@ -21,21 +22,21 @@ class NoteViewModel @Inject constructor(
 
     fun saveNote(note: Note) {
         coroutineScope.launch {
-            useCases.addNote(note)
+            noteUseCases.addNote(note)
             saved.postValue(true)
         }
     }
 
     fun getNote(id: Long) {
         coroutineScope.launch {
-            val note = useCases.getNote(id)
+            val note = noteUseCases.getNote(id)
             currentNote.postValue(note)
         }
     }
 
     fun deleteNote(note: Note) {
         coroutineScope.launch {
-            useCases.removeNote(note)
+            noteUseCases.removeNote(note)
             saved.postValue(true)
         }
     }

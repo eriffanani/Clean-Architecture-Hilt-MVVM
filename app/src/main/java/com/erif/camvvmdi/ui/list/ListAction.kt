@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.presentation
+package com.erif.camvvmdi.ui.list
 
 interface ListAction {
     fun onClick(id: Long)

@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.presentation
+package com.erif.camvvmdi.ui.list.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.erif.camvvmdi.R
+import com.erif.camvvmdi.ui.list.ListAction
 import com.erif.core.data.Note
 import java.text.SimpleDateFormat
 import java.util.Date

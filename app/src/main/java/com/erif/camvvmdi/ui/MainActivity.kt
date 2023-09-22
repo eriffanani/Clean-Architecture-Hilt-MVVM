@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.presentation
+package com.erif.camvvmdi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

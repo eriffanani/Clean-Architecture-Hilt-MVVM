@@ -1,4 +1,4 @@
-package com.erif.core.usecase
+package com.erif.core.usecases
 
 import com.erif.core.data.Note
 

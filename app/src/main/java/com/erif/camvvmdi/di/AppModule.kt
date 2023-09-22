@@ -1,14 +1,14 @@
-package com.erif.camvvmdi.framework.di
+package com.erif.camvvmdi.di
 
 import android.content.Context
-import com.erif.camvvmdi.framework.RoomNoteDataSource
-import com.erif.camvvmdi.framework.UseCases
-import com.erif.core.repository.NoteRepository
-import com.erif.core.usecase.AddNote
-import com.erif.core.usecase.GetAllNote
-import com.erif.core.usecase.GetNote
-import com.erif.core.usecase.GetWordCount
-import com.erif.core.usecase.RemoveNote
+import com.erif.camvvmdi.data.database.notes.RoomNoteDataSource
+import com.erif.camvvmdi.domain.NoteUseCases
+import com.erif.core.repositories.NoteRepository
+import com.erif.core.usecases.AddNote
+import com.erif.core.usecases.GetAllNote
+import com.erif.core.usecases.GetNote
+import com.erif.core.usecases.GetWordCount
+import com.erif.core.usecases.RemoveNote
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,7 +26,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideUseCases(repository: NoteRepository) = UseCases(
+    fun provideNoteUseCases(repository: NoteRepository) = NoteUseCases(
         AddNote(repository),
         GetAllNote(repository),
         GetNote(repository),

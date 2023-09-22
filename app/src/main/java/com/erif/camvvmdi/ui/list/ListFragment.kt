@@ -1,4 +1,4 @@
-package com.erif.camvvmdi.presentation
+package com.erif.camvvmdi.ui.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erif.camvvmdi.R
-import com.erif.camvvmdi.framework.ListViewModel
+import com.erif.camvvmdi.ui.list.adapter.NoteListAdapter
+import com.erif.camvvmdi.ui.list.viewmodel.ListViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 

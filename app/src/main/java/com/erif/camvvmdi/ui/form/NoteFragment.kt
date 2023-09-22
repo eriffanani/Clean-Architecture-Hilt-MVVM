@@ -1,8 +1,7 @@
-package com.erif.camvvmdi.presentation
+package com.erif.camvvmdi.ui.form
 
 import android.app.AlertDialog
 import android.content.Context
-import android.hardware.input.InputManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,10 +18,9 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.erif.camvvmdi.R
-import com.erif.camvvmdi.framework.NoteViewModel
+import com.erif.camvvmdi.ui.form.viewmodel.NoteViewModel
 import com.erif.core.data.Note
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
